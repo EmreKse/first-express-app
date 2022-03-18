@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <nav>
-        <div class = 'site title'>
-            <a href="/">
-                <h1>Deneme</h1>
-            </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <div class="site title">
+                <a href="/">
+                    <h1>Deneme</h1>
+                </a>
+            </div>
+            <ul>
+                <li><a href="/"> Anasayfa</a></li>
+                <li><a href="/hakkimda"> Hakkımda</a></li>
+                <li><a href="/babasayfa"> Babasayfa</a></li>
+            </ul>
+        </nav>
+        <div class="frameworks content">
+            <h2>Frameworks</h2>
+            <% if(frameworks.length >0) { %>
+            <% frameworks.forEach(fw => { %>
+            <h3 class="baslik"><%=fw.baslik %></h3>
+            <p class="icerik"><%=fw.icerik %></p>
+            <% }) %>
+            <% } else { %>
+            <p>Framework yok</p>
+            <% } %>
         </div>
-        <ul>
-            <li><a href="/"> Anasayfa</a></li>
-            <li><a href="/hakkimda"> Hakkımda</a></li>
-            <li><a href="/babasayfa"> Babasayfa</a></li>
-        </ul>
-    </nav>
-    
-</body>
+    </body>
 </html>
